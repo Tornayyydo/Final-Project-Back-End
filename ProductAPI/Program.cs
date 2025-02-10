@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ProductAPI.Data;
+using ProductAPI.Core.Interfaces;
+using ProductAPI.Infrastructure;
+using ProductAPI.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +15,28 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<StoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 var app = builder.Build();
+
+// Apply Migrations Automatically on Startup
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+
+    try
+    {
+        var context = services.GetRequiredService<StoreDbContext>();
+        await context.Database.MigrateAsync();
+        await StoreContextSeed.SeedAsync(context, loggerFactory);
+    }
+    catch (Exception ex)
+    {
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(ex, "An error occurred during migration");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -28,4 +51,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
