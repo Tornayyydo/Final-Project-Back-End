@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ProductAPI.API.Helpers;
+using ProductAPI.API.MiddleWare;
 using ProductAPI.Core.Interfaces;
 using ProductAPI.Infrastructure;
 using ProductAPI.Infrastructure.Data;
+using System.ComponentModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +49,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 app.UseHttpsRedirection();
 
