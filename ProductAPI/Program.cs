@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ProductAPI.API.Helpers;
 using ProductAPI.Core.Interfaces;
 using ProductAPI.Infrastructure;
 using ProductAPI.Infrastructure.Data;
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<StoreDbContext>(options =>
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 var app = builder.Build();
 
@@ -47,6 +49,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
