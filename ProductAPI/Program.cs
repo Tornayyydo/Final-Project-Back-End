@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using ProductAPI.API.Errors;
+using ProductAPI.API.Extensions;
 using ProductAPI.API.Helpers;
 using ProductAPI.API.MiddleWare;
 using ProductAPI.Core.Interfaces;
@@ -9,18 +13,16 @@ using System.ComponentModel;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddAutoMapper(typeof(MappingProfiles));
+builder.Services.AddApplicationServices();
+builder.Services.AddSwaggerDocumentation();
 
 var app = builder.Build();
 
@@ -46,8 +48,7 @@ using (var scope = app.Services.CreateScope())
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerDocumentations();
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
