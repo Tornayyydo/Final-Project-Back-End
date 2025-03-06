@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,14 +18,36 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="API\wwwroot\" />
+    <Folder Include="wwwroot\" />
     <Folder Include="Infrastructure\Data\SeedData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\products\boot-ang1.png" />
+    <None Include="wwwroot\images\products\boot-ang2.png" />
+    <None Include="wwwroot\images\products\boot-core1.png" />
+    <None Include="wwwroot\images\products\boot-core2.png" />
+    <None Include="wwwroot\images\products\boot-redis1.png" />
+    <None Include="wwwroot\images\products\glove-code1.png" />
+    <None Include="wwwroot\images\products\glove-code2.png" />
+    <None Include="wwwroot\images\products\glove-react1.png" />
+    <None Include="wwwroot\images\products\glove-react2.png" />
+    <None Include="wwwroot\images\products\hat-core1.png" />
+    <None Include="wwwroot\images\products\hat-react1.png" />
+    <None Include="wwwroot\images\products\hat-react2.png" />
+    <None Include="wwwroot\images\products\sb-ang1.png" />
+    <None Include="wwwroot\images\products\sb-ang2.png" />
+    <None Include="wwwroot\images\products\sb-core1.png" />
+    <None Include="wwwroot\images\products\sb-core2.png" />
+    <None Include="wwwroot\images\products\sb-react1.png" />
+    <None Include="wwwroot\images\products\sb-ts1.png" />
   </ItemGroup>
 
 </Project>
