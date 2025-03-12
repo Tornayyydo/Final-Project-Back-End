@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.OpenApi.Models;
-using ProductAPI.API.Errors;
 using ProductAPI.API.Extensions;
 using ProductAPI.API.Helpers;
 using ProductAPI.API.MiddleWare;
-using ProductAPI.Core.Interfaces;
+using ProductAPI.Core.Entities.Identity;
 using ProductAPI.Infrastructure;
 using ProductAPI.Infrastructure.Data;
+using ProductAPI.Infrastructure.Identity;
 using StackExchange.Redis;
-using System.ComponentModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +29,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<StoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<AppIdentityDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
+});
+
 builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
 {
     var configuration = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
@@ -38,6 +41,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
 });
 
 builder.Services.AddApplicationServices();
+builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
 
 var app = builder.Build();
@@ -53,6 +57,11 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<StoreDbContext>();
         await context.Database.MigrateAsync();
         await StoreContextSeed.SeedAsync(context, loggerFactory);
+
+        var userManager = services.GetRequiredService<UserManager<AppUser>>();
+        var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+        await identityContext.Database.MigrateAsync();
+        await AppIdentityDbContextSeed.SeedUsersAsync(userManager);
     }
     catch (Exception ex)
     {
@@ -82,6 +91,7 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = ""
 });
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -2,6 +2,7 @@
 using ProductAPI.API.Errors;
 using ProductAPI.Core.Interfaces;
 using ProductAPI.Infrastructure.Data;
+using ProductAPI.Infrastructure.Services;
 
 namespace ProductAPI.API.Extensions
 {
@@ -9,6 +10,7 @@ namespace ProductAPI.API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services) 
         {
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
