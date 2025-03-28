@@ -1,4 +1,5 @@
 ﻿using ProductAPI.Core.Entities;
+using ProductAPI.Core.Entities.OrderAggregate;
 using ProductAPI.Infrastructure.Data;
 using System.Text.Json;
 
@@ -55,6 +56,22 @@ namespace ProductAPI.Infrastructure
                     foreach (var item in products)
                     {
                         context.Products.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.DeliveryMethods.Any())
+                {
+                    var deliveryMethodDataPath = Path.Combine(basePath, "Infrastructure", "Data", "SeedData", "delivery.json");
+
+                    var deliveryMethodData = File.ReadAllText(deliveryMethodDataPath);
+
+                    var deliveryMethods = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryMethodData);
+
+                    foreach (var item in deliveryMethods)
+                    {
+                        context.DeliveryMethods.Add(item);
                     }
 
                     await context.SaveChangesAsync();
