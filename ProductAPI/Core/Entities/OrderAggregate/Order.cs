@@ -1,4 +1,6 @@
-﻿namespace ProductAPI.Core.Entities.OrderAggregate
+﻿using System.Text.Json.Serialization;
+
+namespace ProductAPI.Core.Entities.OrderAggregate
 {
     public class Order : BaseEntity
     {
@@ -21,6 +23,7 @@
         public DeliveryMethod DeliveryMethod { get; set; }
         public IReadOnlyList<OrderItem> OrderItems { get; set; }
         public decimal Subtotal { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public string? PaymentIntentId { get; set; }
         public decimal GetTotal()
