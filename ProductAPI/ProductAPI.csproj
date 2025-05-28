@@ -7,9 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Content\images\products\controller3.png" />
+    <Content Include="Content\images\products\controller4.png" />
+    <Content Include="Content\images\products\controller5.png" />
+    <Content Include="Content\images\products\controller6.png" />
+    <Content Include="Content\images\products\headset1.png" />
+    <Content Include="Content\images\products\headset2.png" />
+    <Content Include="Content\images\products\headset3.png" />
+    <Content Include="Content\images\products\headset4.png" />
+    <Content Include="Content\images\products\headset5.png" />
+    <Content Include="Content\images\products\keyboard1.png" />
+    <Content Include="Content\images\products\keyboard2.png" />
+    <Content Include="Content\images\products\keyboard3.png" />
+    <Content Include="Content\images\products\keyboard4.png" />
+    <Content Include="Content\images\products\keyboard5.png" />
+    <Content Include="Content\images\products\mouse1.png" />
+    <Content Include="Content\images\products\mouse2.png" />
+    <Content Include="Content\images\products\mouse3.png" />
+    <Content Include="Content\images\products\mouse4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
@@ -24,6 +45,7 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="9.0.2" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.6.1" />
     <PackageReference Include="StackExchange.Redis" Version="2.8.31" />
+    <PackageReference Include="Stripe.net" Version="48.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.3.1" />
@@ -31,28 +53,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <None Include="Content\images\products\boot-ang2.png" />
+    <None Include="Content\images\products\boot-core1.png" />
+    <None Include="Content\images\products\boot-core2.png" />
+    <None Include="Content\images\products\boot-redis1.png" />
+    <None Include="Content\images\products\glove-code1.png" />
+    <None Include="Content\images\products\glove-code2.png" />
+    <None Include="Content\images\products\glove-react1.png" />
+    <None Include="Content\images\products\glove-react2.png" />
+    <None Include="Content\images\products\hat-core1.png" />
+    <None Include="Content\images\products\hat-react1.png" />
+    <None Include="Content\images\products\hat-react2.png" />
+    <None Include="Content\images\products\sb-ang1.png" />
+    <None Include="Content\images\products\sb-ang2.png" />
+    <None Include="Content\images\products\sb-core1.png" />
+    <None Include="Content\images\products\sb-core2.png" />
+    <None Include="Content\images\products\sb-react1.png" />
+    <None Include="Content\images\products\sb-ts1.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\images\products\boot-ang1.png" />
-    <None Include="wwwroot\images\products\boot-ang2.png" />
-    <None Include="wwwroot\images\products\boot-core1.png" />
-    <None Include="wwwroot\images\products\boot-core2.png" />
-    <None Include="wwwroot\images\products\boot-redis1.png" />
-    <None Include="wwwroot\images\products\glove-code1.png" />
-    <None Include="wwwroot\images\products\glove-code2.png" />
-    <None Include="wwwroot\images\products\glove-react1.png" />
-    <None Include="wwwroot\images\products\glove-react2.png" />
-    <None Include="wwwroot\images\products\hat-core1.png" />
-    <None Include="wwwroot\images\products\hat-react1.png" />
-    <None Include="wwwroot\images\products\hat-react2.png" />
-    <None Include="wwwroot\images\products\sb-ang1.png" />
-    <None Include="wwwroot\images\products\sb-ang2.png" />
-    <None Include="wwwroot\images\products\sb-core1.png" />
-    <None Include="wwwroot\images\products\sb-core2.png" />
-    <None Include="wwwroot\images\products\sb-react1.png" />
-    <None Include="wwwroot\images\products\sb-ts1.png" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

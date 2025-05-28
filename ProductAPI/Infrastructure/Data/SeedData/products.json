@@ -1,146 +1,146 @@
 [
   {
-    "Name": "Angular Speedster Board 2000",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.",
-    "Price": 200,
-    "PictureUrl": "images/products/sb-ang1.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
+    "Name": "Nintendo Switch Pro Controller",
+    "Description": "Take your gaming sessions up a notch with the Nintendo Switch Pro Controller.",
+    "Price": 70,
+    "PictureUrl": "images/products/controller3.png",
+    "ProductTypeId": 9,
+    "ProductBrandId": 15
   },
   {
-    "Name": "Green Angular Board 3000",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-    "Price": 150,
-    "PictureUrl": "images/products/sb-ang2.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Core Board Speed Rush 3",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 180,
-    "PictureUrl": "images/products/sb-core1.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Net Core Super Board",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 300,
-    "PictureUrl": "images/products/sb-core2.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "React Board Super Whizzy Fast",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.",
-    "Price": 250,
-    "PictureUrl": "images/products/sb-react1.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Typescript Entry Board",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Name": "Razer Wolverine Ultimate Controller",
+    "Description": "Customizable controller with RGB lighting and extra buttons for gaming precision.",
     "Price": 120,
-    "PictureUrl": "images/products/sb-ts1.png",
-    "ProductTypeId": 1,
-    "ProductBrandId": 5
+    "PictureUrl": "images/products/controller4.png",
+    "ProductTypeId": 9,
+    "ProductBrandId": 16
   },
   {
-    "Name": "Core Blue Hat",
-    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 10,
-    "PictureUrl": "images/products/hat-core1.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 2
+    "Name": "Logitech G Gamepad F310",
+    "Description": "Affordable controller for PC gaming with customizable buttons and comfort grip.",
+    "Price": 40,
+    "PictureUrl": "images/products/controller5.png",
+    "ProductTypeId": 9,
+    "ProductBrandId": 17
   },
   {
-    "Name": "Green React Woolen Hat",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 8,
-    "PictureUrl": "images/products/hat-react1.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 4
+    "Name": "SteelSeries Stratus Duo Controller",
+    "Description": "Wireless gaming controller for mobile and PC with multi-platform support.",
+    "Price": 60,
+    "PictureUrl": "images/products/controller6.png",
+    "ProductTypeId": 9,
+    "ProductBrandId": 18
   },
   {
-    "Name": "Purple React Woolen Hat",
-    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 15,
-    "PictureUrl": "images/products/hat-react2.png",
-    "ProductTypeId": 2,
-    "ProductBrandId": 4
+    "Name": "Razer BlackShark V2 Headset",
+    "Description": "Esports headset with superior sound isolation and THX Spatial Audio.",
+    "Price": 100,
+    "PictureUrl": "images/products/headset1.png",
+    "ProductTypeId": 10,
+    "ProductBrandId": 16
   },
   {
-    "Name": "Blue Code Gloves",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-    "Price": 18,
-    "PictureUrl": "images/products/glove-code1.png",
-    "ProductTypeId": 4,
-    "ProductBrandId": 3
+    "Name": "Logitech G Pro X Gaming Headset",
+    "Description": "Pro-grade headset designed for esports professionals with Blue VO!CE technology.",
+    "Price": 130,
+    "PictureUrl": "images/products/headset2.png",
+    "ProductTypeId": 10,
+    "ProductBrandId": 17
   },
   {
-    "Name": "Green Code Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 15,
-    "PictureUrl": "images/products/glove-code2.png",
-    "ProductTypeId": 4,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Purple React Gloves",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
-    "Price": 16,
-    "PictureUrl": "images/products/glove-react1.png",
-    "ProductTypeId": 4,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Green React Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 14,
-    "PictureUrl": "images/products/glove-react2.png",
-    "ProductTypeId": 4,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Redis Red Boots",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 250,
-    "PictureUrl": "images/products/boot-redis1.png",
-    "ProductTypeId": 3,
-    "ProductBrandId": 6
-  },
-  {
-    "Name": "Core Red Boots",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.",
-    "Price": 189.99,
-    "PictureUrl": "images/products/boot-core2.png",
-    "ProductTypeId": 3,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Core Purple Boots",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 199.99,
-    "PictureUrl": "images/products/boot-core1.png",
-    "ProductTypeId": 3,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Angular Purple Boots",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Name": "SteelSeries Arctis 7",
+    "Description": "Wireless gaming headset with ultra-low latency and high fidelity audio.",
     "Price": 150,
-    "PictureUrl": "images/products/boot-ang2.png",
-    "ProductTypeId": 3,
-    "ProductBrandId": 1
+    "PictureUrl": "images/products/headset3.png",
+    "ProductTypeId": 10,
+    "ProductBrandId": 18
   },
   {
-    "Name": "Angular Blue Boots",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 180,
-    "PictureUrl": "images/products/boot-ang1.png",
-    "ProductTypeId": 3,
-    "ProductBrandId": 1
+    "Name": "PlayStation Pulse 3D Wireless Headset",
+    "Description": "Wireless headset designed for 3D audio on PlayStation 5 with built-in microphone.",
+    "Price": 100,
+    "PictureUrl": "images/products/headset4.png",
+    "ProductTypeId": 10,
+    "ProductBrandId": 13
+  },
+  {
+    "Name": "Xbox Stereo Headset",
+    "Description": "Comfortable stereo headset for Xbox with high-quality sound and adjustable mic.",
+    "Price": 60,
+    "PictureUrl": "images/products/headset5.png",
+    "ProductTypeId": 10,
+    "ProductBrandId": 14
+  },
+  {
+    "Name": "Razer Huntsman Mini Keyboard",
+    "Description": "Compact 60% gaming keyboard with Razer Optical Switches.",
+    "Price": 120,
+    "PictureUrl": "images/products/keyboard1.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 16
+  },
+  {
+    "Name": "Logitech G915 TKL Keyboard",
+    "Description": "Wireless RGB mechanical gaming keyboard with low-profile GL switches.",
+    "Price": 230,
+    "PictureUrl": "images/products/keyboard2.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 17
+  },
+  {
+    "Name": "SteelSeries Apex Pro Keyboard",
+    "Description": "RGB mechanical keyboard with customizable switches for ultimate performance.",
+    "Price": 250,
+    "PictureUrl": "images/products/keyboard3.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 18
+  },
+  {
+    "Name": "Razer Cynosa V2 Keyboard",
+    "Description": "Full-sized RGB gaming keyboard with Razer Chroma and dedicated media controls.",
+    "Price": 80,
+    "PictureUrl": "images/products/keyboard4.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 16
+  },
+  {
+    "Name": "Logitech G213 Prodigy Keyboard",
+    "Description": "Affordable RGB gaming keyboard with durable design and responsive keys.",
+    "Price": 60,
+    "PictureUrl": "images/products/keyboard5.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 17
+  },
+  {
+    "Name": "Razer DeathAdder V2 Mouse",
+    "Description": "Ergonomic gaming mouse with Razer Optical Mouse Switch and 20K DPI sensor.",
+    "Price": 70,
+    "PictureUrl": "images/products/mouse1.png",
+    "ProductTypeId": 12,
+    "ProductBrandId": 16
+  },
+  {
+    "Name": "SteelSeries Rival 3 Mouse",
+    "Description": "Durable gaming mouse built for performance with TrueMove Core optical sensor.",
+    "Price": 30,
+    "PictureUrl": "images/products/mouse2.png",
+    "ProductTypeId": 12,
+    "ProductBrandId": 18
+  },
+  {
+    "Name": "Logitech G Pro Wireless Mouse",
+    "Description": "Lightweight wireless gaming mouse with HERO sensor and up to 25K DPI.",
+    "Price": 130,
+    "PictureUrl": "images/products/mouse3.png",
+    "ProductTypeId": 12,
+    "ProductBrandId": 17
+  },
+  {
+    "Name": "PlayStation Wireless Mouse",
+    "Description": "Official wireless mouse for PlayStation with precision tracking.",
+    "Price": 50,
+    "PictureUrl": "images/products/mouse4.png",
+    "ProductTypeId": 12,
+    "ProductBrandId": 13
   }
 ]

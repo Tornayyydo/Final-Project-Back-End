@@ -1,20 +1,8 @@
 [
-  {
-    "Name": "Angular"
-  },
-  {
-    "Name": "NetCore"
-  },
-  {
-    "Name": "VS Code"
-  },
-  {
-    "Name": "React"
-  },
-  {
-    "Name": "Typescript"
-  },
-  {
-    "Name": "Redis"
-  }
+  { "Name": "PlayStation" },
+  { "Name": "Xbox" },
+  { "Name": "Nintendo" },
+  { "Name": "Razer" },
+  { "Name": "Logitech" },
+  { "Name": "SteelSeries" }
 ]

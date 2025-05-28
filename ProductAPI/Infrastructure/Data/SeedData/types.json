@@ -1,14 +1,6 @@
 [
-  {
-    "Name": "Boards"
-  },
-  {
-    "Name": "Hats"
-  },
-  {
-    "Name": "Boots"
-  },
-  {
-    "Name": "Gloves"
-  }
+  { "Name": "Controllers" },
+  { "Name": "Headsets" },
+  { "Name": "Keyboards" },
+  { "Name": "Mice" }
 ]
