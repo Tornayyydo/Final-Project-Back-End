@@ -1,0 +1,92 @@
+<div class="container">
+  <header
+    class="d-flex align-items-center justify-content-between py-3 mb-4 border-bottom fixed-top bg-white shadow"
+  >
+    <div class="logo ms-3">
+      <img src="assets/images/logo.png" style="max-height: 70px; cursor: pointer;" alt="logo" routerLink="/" />
+    </div>
+
+    <ul class="nav mx-auto d-none d-md-flex" style="font-size: larger">
+      <li><a routerLink="/" routerLinkActive="active" class="nav-link px-3" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/shop" routerLinkActive="active" class="nav-link px-3">Shop</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="nav-link px-3">About</a></li>
+    </ul>
+
+    <div class="d-none d-md-flex align-items-center me-3">
+      <div routerLink="/basket" class="position-relative me-4" style="cursor: pointer;">
+        <i class="fa fa-shopping-cart fa-2x text-dark"></i>
+        <div *ngIf="(basket$ | async) as basket" class="cart-no">{{ basket.items ? basket.items.length : 0 }}</div>
+      </div>
+
+      <ng-container *ngIf="(currentUser$ | async) === null">
+        <button routerLink="/account/login" type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button routerLink="/account/register" type="button" class="btn btn-outline-primary me-4">Sign-up</button>
+      </ng-container>
+
+      <ng-container *ngIf="(currentUser$ | async) as user">
+        <div class="dropdown ms-3 me-3" dropdown>
+          <a class="dropdown-toggle" style="cursor: pointer;" dropdownToggle>
+            <strong>Welcome {{user.displayName}}</strong>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" style="cursor: pointer;" *dropdownMenu>
+            <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-shopping-cart me-3"></i> View Basket
+            </a>
+            <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-history me-3"></i> View Orders
+            </a>
+            <div class="dropdown-divider"></div>
+            <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+              <i class="fa fa-sign-out me-3"></i> Logout
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <button class="btn d-md-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <i class="fa fa-bars fa-2x text-primary"></i>
+    </button>
+  </header>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold text-primary" id="mobileMenuLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-4 py-3">
+    <div class="mb-3">
+      <h6 class="fw-bold text-secondary">Navigation</h6>
+      <ul class="nav flex-column fs-5">
+        <li class="nav-item"><a routerLink="/" class="nav-link text-dark px-0 py-1" data-bs-dismiss="offcanvas">Home</a></li>
+        <li class="nav-item"><a routerLink="/shop" class="nav-link text-dark px-0 py-1" data-bs-dismiss="offcanvas">Shop</a></li>
+        <li class="nav-item"><a routerLink="/about" class="nav-link text-dark px-0 py-1" data-bs-dismiss="offcanvas">About</a></li>
+      </ul>
+    </div>
+
+    <hr class="my-3" />
+
+    <div class="mb-3">
+      <h6 class="fw-bold text-secondary">Your Basket</h6>
+      <a routerLink="/basket" class="nav-link d-flex align-items-center text-dark fs-5" data-bs-dismiss="offcanvas">
+        <i class="fa fa-shopping-cart me-2 text-primary"></i> Basket
+      </a>
+    </div>
+
+    <hr class="my-3" />
+
+    <div>
+      <ng-container *ngIf="(currentUser$ | async) === null">
+        <h6 class="fw-bold text-secondary">Account</h6>
+        <a routerLink="/account/login" class="nav-link text-dark fs-5 px-0 py-1" data-bs-dismiss="offcanvas">Login</a>
+        <a routerLink="/account/register" class="nav-link text-dark fs-5 px-0 py-1" data-bs-dismiss="offcanvas">Sign-up</a>
+      </ng-container>
+
+      <ng-container *ngIf="(currentUser$ | async) as user">
+        <h6 class="fw-bold text-secondary mb-2">Welcome {{user.displayName}}</h6>
+        <a routerLink="/orders" class="nav-link text-dark fs-5 px-0 py-1" data-bs-dismiss="offcanvas">My Orders</a>
+        <a (click)="logout()" class="nav-link text-danger fs-5 px-0 py-1" style="cursor: pointer;" data-bs-dismiss="offcanvas">Logout</a>
+      </ng-container>
+    </div>
+  </div>
+</div>

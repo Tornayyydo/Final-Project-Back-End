@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div *ngIf="product" class="row g-4">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img [src]="product.pictureUrl" [alt]="product.name" class="img-fluid w-100 rounded shadow-sm">
+        </div>
+    
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h3 class="fw-bold">{{ product.name }}</h3>
+            <p class="text-muted fs-4">{{ product.price | currency }}</p>
+    
+            <!-- Quantity Controls & Cart Button -->
+            <div class="d-flex align-items-center gap-3">
+                <i (click)="decrementQuantity()" class="fa fa-minus-circle text-warning" style="cursor: pointer; font-size: 2em;"></i>
+                <span class="fw-bold fs-4">{{quantity}}</span>
+                <i (click)="incrementQuantity()" class="fa fa-plus-circle text-warning" style="cursor: pointer; font-size: 2em;"></i>
+                <button (click)="addItemToBasket()" class="btn btn-outline-primary btn-lg ms-4">Add to Cart</button>
+            </div>
+        </div>
+    
+        <!-- Product Description -->
+        <div class="col-12">
+            <h4 class="fw-semibold">Description</h4>
+            <p class="text-secondary">{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+

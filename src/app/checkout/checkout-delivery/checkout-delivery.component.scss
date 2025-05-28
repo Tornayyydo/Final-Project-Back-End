@@ -1,0 +1,11 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.form-check-label {
+    transition: background 0.3s ease-in-out;
+}
+
+.form-check-label:hover {
+    background: rgba(0, 123, 255, 0.1);
+}

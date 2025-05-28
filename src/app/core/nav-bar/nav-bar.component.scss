@@ -1,0 +1,31 @@
+.cart-no {
+    position: absolute;
+    min-height: 20px;
+    min-width: 20px;
+    font-size: 0.8em;
+    background: blue;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    top: -8px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+  &.active {
+    color: #007BFF;
+    font-weight: bold;
+    background-color: #007bff1d;
+  }
+}
+  
+.offcanvas .nav-link {
+  transition: color 0.2s;
+}
+
+.offcanvas .nav-link:hover {
+  color: #0d6efd !important;
+}

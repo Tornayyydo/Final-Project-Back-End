@@ -1,0 +1,80 @@
+<ng-container *ngIf="(basket$ | async) as basket">
+    <div class="table-responsive d-none d-md-block">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="border-0" scope="col" [class.bg-light]="isBasket">
+                        <div class="p-2 px-3 text-uppercase">Product</div>
+                    </th>
+                    <th class="border-0" scope="col" [class.bg-light]="isBasket">
+                        <div class="py-2 text-uppercase">Price</div>
+                    </th>
+                    <th class="border-0" scope="col" [class.bg-light]="isBasket">
+                        <div class="py-2 text-uppercase">Quantity</div>
+                    </th>
+                    <th class="border-0" scope="col" [class.bg-light]="isBasket">
+                        <div class="py-2 text-uppercase">Total</div>
+                    </th>
+                    <th *ngIf="isBasket" class="border-0 bg-light" scope="col">
+                        <div class="py-2 text-uppercase">Remove</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of (basket$ | async)?.items">
+                    <th scope="row">
+                        <div class="p-2">
+                            <img [src]="item.pictureUrl" [alt]="item.productName" class="img-fluid" style="max-height: 50px;">
+                            <div class="ms-3 d-inline-block align-middle">
+                                <h5 class="mb-0">
+                                    <a [routerLink]="['/shop/', item.id]" class="text-dark" style="text-decoration: none; color: rgb(95, 29, 157) !important;">{{item.productName}}</a>
+                                </h5>
+                                <span class="text-muted font-weight-normal font-italic d-block">Type: {{item.type}}</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="align-middle"><strong>{{item.price | currency}}</strong></td>
+                    <td class="align-middle">
+                        <div class="d-flex align-items-center gap-3" [class.justify-content-center]="!isBasket">
+                            <i *ngIf="isBasket" (click)="decrementItemQuantity(item)" class="fa fa-minus-circle text-warning" style="cursor: pointer; font-size: 2em;"></i>
+                            <span class="fw-bold fs-4">{{item.quantity}}</span>
+                            <i *ngIf="isBasket" (click)="incrementItemQuantity(item)" class="fa fa-plus-circle text-warning" style="cursor: pointer; font-size: 2em;"></i>
+                        </div>
+                    </td>
+                    <td class="align-middle"><strong>{{item.price * item.quantity | currency}}</strong></td>
+                    <td class="align-middle text-center">
+                        <a class="text-danger">
+                            <i *ngIf="isBasket" (click)="removeBasketItem(item)" class="fa fa-trash" style="font-size: 2em; cursor: pointer;"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="d-block d-md-none">
+        <div *ngFor="let item of basket.items" class="card mb-3">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex align-items-center mb-2">
+              <img [src]="item.pictureUrl" alt="Product image" class="img-fluid me-2" style="max-height: 50px;">
+              <div>
+                <h5 class="mb-0">{{ item.productName }}</h5>
+                <small class="text-muted">Type: {{ item.type }}</small>
+              </div>
+            </div>
+    
+            <p class="mb-1"><strong>Price:</strong> {{ item.price | currency }}</p>
+            <p class="mb-1"><strong>Quantity:</strong> {{ item.quantity }}</p>
+            <p class="mb-1"><strong>Total:</strong> {{ item.price * item.quantity | currency }}</p>
+    
+            <div *ngIf="isBasket" class="d-flex justify-content-between align-items-center mt-2">
+              <div>
+                <i (click)="decrementItemQuantity(item)" class="fa fa-minus-circle text-warning me-2" style="cursor: pointer; font-size: 1.5em;"></i>
+                <i (click)="incrementItemQuantity(item)" class="fa fa-plus-circle text-warning" style="cursor: pointer; font-size: 1.5em;"></i>
+              </div>
+              <i (click)="removeBasketItem(item)" class="fa fa-trash text-danger" style="font-size: 1.5em; cursor: pointer;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+</ng-container>

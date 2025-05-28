@@ -1,0 +1,148 @@
+<section class="py-5 bg-light text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-primary mb-3">Welcome to Gaming Gear Hub!</h1>
+      <p class="lead text-secondary mb-4">Take your gaming to the next level with our top-quality products.</p>
+      <a routerLink="/shop" class="btn btn-primary btn-lg px-5 py-3">Shop Now</a>
+    </div>
+  </section>
+
+<carousel>
+    <slide>
+      <img src="assets/images/hero1.jpg" alt="First slide" class="d-block w-100" style="height: 80vh; object-fit: cover;">
+    </slide>
+    <slide>
+      <img src="assets/images/hero2.jpg" alt="Second slide" class="d-block w-100" style="height: 80vh; object-fit: cover;">
+    </slide>
+    <slide>
+      <img src="assets/images/hero3.jpg" alt="Third slide" class="d-block w-100" style="height: 80vh; object-fit: cover;">
+    </slide>
+  </carousel>
+  
+  <section class="py-5 px-5">
+    <div class="container-fluid">
+      <h2 class="text-center text-primary mb-5">Our Categories</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3">
+          <a [routerLink]="['/shop']" [queryParams]="{ typeId: 9 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/category4.png" class="card-img-top img-fluid" style="height: 600px; object-fit: cover;" alt="Controllers">
+              <div class="card-body text-center">
+                <h5 class="card-title">Controllers</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a [routerLink]="['/shop']" [queryParams]="{ typeId: 10 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/category3.png" class="card-img-top img-fluid" style="height: 600px; object-fit: cover;" alt="Headsets">
+              <div class="card-body text-center">
+                <h5 class="card-title">Headsets</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a [routerLink]="['/shop']" [queryParams]="{ typeId: 11 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/category1.png" class="card-img-top img-fluid" style="height: 600px; object-fit: cover;" alt="Keyboards">
+              <div class="card-body text-center">
+                <h5 class="card-title">Keyboards</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-3">
+          <a [routerLink]="['/shop']" [queryParams]="{ typeId: 12 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/category2.png" class="card-img-top img-fluid" style="height: 600px; object-fit: cover;" alt="Mice">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gaming Mice</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-5 px-5 bg-light">
+    <div class="container-fluid">
+      <h2 class="text-center text-primary mb-5">Featured Brands</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 13 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/playstation.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="PlayStation">
+              <div class="card-body text-center">
+                <h5 class="card-title">PlayStation</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 14 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/xbox.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="Xbox">
+              <div class="card-body text-center">
+                <h5 class="card-title">Xbox</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 15 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/nintendo.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="Nintendo">
+              <div class="card-body text-center">
+                <h5 class="card-title">Nintendo</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 16 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/razer.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="Razer">
+              <div class="card-body text-center">
+                <h5 class="card-title">Razer</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 17 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/logitech.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="Logitech">
+              <div class="card-body text-center">
+                <h5 class="card-title">Logitech</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-2">
+          <a [routerLink]="['/shop']" [queryParams]="{ brandId: 18 }" class="text-decoration-none text-dark">
+            <div class="card shadow-sm border-0">
+              <img src="assets/images/steelseries.png" class="card-img-top img-fluid p-4" style="height: 200px; object-fit: contain;" alt="SteelSeries">
+              <div class="card-body text-center">
+                <h5 class="card-title">SteelSeries</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
